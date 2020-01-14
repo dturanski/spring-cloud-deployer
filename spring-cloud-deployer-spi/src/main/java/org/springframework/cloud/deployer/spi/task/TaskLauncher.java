@@ -124,6 +124,14 @@ public interface TaskLauncher {
 	}
 
 	/**
+	 *
+	 * @return true if a task is running.
+	 */
+	default boolean isTaskRunning(String taskName) {
+		throw new UnsupportedOperationException("'isTaskRunning' is not implemented.");
+	}
+
+	/**
 	 * Return the log of the application identified by the task ID.
 	 * The ID can be specific to the platform where the task is launched.
 	 *
